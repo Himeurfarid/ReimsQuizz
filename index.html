@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>ReimsQuiz</title>
+</head>
+<body>
+    <form
+    oninput="result.value=parseInt(drone.value)+ parseInt(drone1.value)+parseInt(drone2.value)+ parseInt(drone3.value); message.value = (result.value < 3 ? `le score est pathétique ${joueur.value}` : result.value>=3 ? `Trop fort ce ${joueur.value}`:``)">
+<section class="segment" id="pageun">
+        <h1 id="delete">Bienvenue</h1>
+        <img class="main-logo" src="logo-temporaire.png" alt="logo burger">
+        <input id="playername" type="text" placeholder="Nom du joueur" name="joueur">
+        <a href="#pagedeux" class="play-button">JOUER</a>
+    </section>
+    <section id="pagedeux">
+        <div class="corps">
+                <div class="segment" id="page1">
+                  
+                        <nav class="desktopnav">
+                            <img id="logo" src="titre-logo.png" alt="Titre" >
+                            <h2 class="playerid  textlastpage"></h2>
+                            <h2>Question N°1</h2>
+                        </nav>
+                    <h1>Quelle cave de champagne ne se trouvent pas à Reims ?</h1>
+                    <div class = "reponse">
+                        <input type="radio" data-response="bad" id="reponse1" name="drone" value=0>
+                        <label for="reponse1"> Les caves de la Maison Taittinger </label>
+                        <input type="radio" data-response="good" id="reponse2" name="drone" value=1>
+                        <label for="reponse2">Les caves de la Maison Moet & Chandon </label>
+                        <input type="radio" data-response="bad" id="reponse3" name="drone" value=0>
+                        <label for="reponse3">Les caves de la Maison Ruinart </label>
+                        <input type="radio" data-response="bad" id="reponse4" name="drone" value=0>
+                        <label for="reponse4">Les caves de la Maison Veuve Clicquot</label>
+                    </div>
+                    <a class="valid-button" href="#page2">Suivant</a>
+                    <div class="w3-border" style="width:90%; margin-left: 5%">
+                        <div class="w3-bar" style="height:24px;width:8%;color:black">0</div>
+                      </div> 
+                </div>
+
+                <div class="segment" id="page2">
+                    <nav class="desktopnav">
+                        <img src="titre-logo.png" alt="Titre" >
+                        <h2 class="playerid textlastpage"></h2>
+                        <h2>Question N°2</h2>
+                    </nav>
+                    <h1>Où se trouve le campus de la Wild Code School à Reims ?</h1>
+                    <div class="reponse">
+                    
+                    <input type="radio" data-response="bad" id="reponse5" name="drone1" value=0>
+                    <label for="reponse5"> Dans les locaux d’un Pôle Emploi</label>
+                    <input type="radio" data-response="good" id="reponse6" name="drone1" value=1>
+                    <label for="reponse6">Dans les locaux de Quartier Libre</label>
+                    <input type="radio" data-response="bad" id="reponse7" name="drone1" value=0>
+                    <label for="reponse7">Dans les locaux de Magasin Libre</label>
+                    <input type="radio" data-response="bad" id="reponse8" name="drone1" value=0>
+                    <label for="reponse8">Dans les locaux de Mission locale</label>
+                    </div>
+                    <a class="valid-button" href="#page3">Suivant</a>
+                    <div class="w3-border" style="width:90%; margin-left: 5%">
+                        <div class="w3-bar" style="height:24px;width:25%;color:black">25%</div>
+                    </div>
+                </div>
+                <div class="segment" id="page3">
+                    <nav class="desktopnav">
+                        <img src="titre-logo.png" alt="Titre" >
+                        <h2 class = "playerid textlastpage"></h2>
+                        <h2>Question N°3</h2>
+                    </nav>
+                    <h1>Quel quartier ne se trouve pas à Reims ?</h1>
+                    <div class="reponse">
+                        <input type="radio" data-response="bad" id="reponse9" name="drone2" value=0>
+                        <label for="reponse9">La Neuvillette </label>
+                        <input type="radio" data-response="good" id="reponse10" name="drone2" value=1>
+                        <label for="reponse10">Croix du Nord</label>
+                        <input type="radio" data-response="bad" id="reponse11" name="drone2" value=0>
+                        <label for="reponse11">Pommery</label>
+                        <input type="radio" data-response="bad" id="reponse12" name="drone2" value=0>
+                        <label for="reponse12">Courlancy</label>
+                    </div>
+                    <a class="valid-button" href="#page4">Suivant</a>
+                    <div class="w3-border" style="width:90%; margin-left: 5%">
+                        <div class="w3-bar" style="height:24px;width:50%;color:black">50</div>
+                      </div>
+                </div>
+                <div class="segment" id="page4">
+                    <nav class="desktopnav">
+                        <img src="titre-logo.png" alt="Titre" >
+                        <h2 class = "playerid textlastpage"></h2>
+                        <h2>Question N°4</h2>
+                    </nav>
+                    <h1>Quel est le terminus de la ligne A du tramway rémois ?</h1>
+                    <div class="reponse">
+                        <input type="radio" data-response="bad" id="reponse13" name="drone3" value=0>
+                        <label for="reponse13"> Dans le ciel </label>
+                        <input type="radio" data-response="good" id="reponse14" name="drone3" value=1>
+                        <label for="reponse14">Neufchatel</label>
+                        <input type="radio" data-response="bad" id="reponse15" name="drone3" value=0>
+                        <label for="reponse15"> Gare champagne Ardennes TGV</label>
+                        <input type="radio" data-response="bad" id="reponse16" name="drone3" value=0>
+                        <label for="reponse16">Bezannes</label>
+                    </div>
+                    <a class="valid-button" href="#page5">Suivant</a>
+                    <div class="w3-border" style="width:90%; margin-left: 5%">
+                        <div class="w3-bar" style="height:24px;width:75%;color:black">75</div>
+                      </div>
+                </div>
+                <div class="segment" id="page5">
+                    <img class="lastimg" src="logo-temporaire.png" alt ="logo-reims-quiz">
+                    <h2>
+                        <output name="message"></output>
+                    </h2>
+                    <output class="score" name="result"> 0 </output>
+                    <a href="index.html" class="play-button">REJOUER</a>
+                </div>
+        </div>
+    </section>
+</form>
+<script src="src/script.js"></script>
+    </script>
+
+</body>
+
+</html>

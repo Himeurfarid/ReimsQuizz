@@ -1,0 +1,399 @@
+@font-face {
+  font-family: Wicked Mouse;
+  src: local("Wicked Mouse"),
+       local("Wicked Mouse"),
+       url(Wicked\ Mouse\ Demo.otf);
+}
+
+@font-face {
+  font-family: Cocogoose;
+  src: local("Cocogoose"),
+       local("Cocogoose"),
+       url(Cocogoose\ Pro-trial.ttf);
+}
+
+
+* {
+  margin: 0;
+  /*positioner la marge à 0*/
+  padding: 0;
+  /*positionner le bord à 0*/
+  --main-color: #C31DA8;
+  /*couleur du background*/
+  /*--font-play:*/
+  --main-font-text: "Cocogoose";
+  /*Police d'écriture global du site*/
+  --size-text: 8px;
+  /*Taille général des textes*/
+  --size-play: 2rem;
+  /*Taille du texte des bouttons*/
+  box-sizing: border-box;
+}
+
+#playername{
+  max-width: 100%;
+  padding: 1rem;
+  border-radius: 15px;
+  font-family: "Wicked Mouse"; 
+  text-align: center;
+  box-shadow: 0px 5px #30024F;
+  font-size: 1.75rem;
+}
+#playerchamp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+label { 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:white;
+  border-radius: 15px;
+  padding: 1.2rem;  
+  margin-bottom: 1rem;
+  margin: 1rem;
+  text-align: center;
+  position: relative;
+  color:#30024F;
+  font-size:min(2.5vh, 1rem);
+  border-width: 5px;
+  text-decoration: none;
+  box-shadow: 0px 8px #30024F;
+  color:#30024F;
+  font-family: Cocogoose;
+}
+
+.w3-border {
+  display: block;
+  border: 2px solid white;
+  border-radius: 30px;
+  margin-top:1rem;
+}
+
+.w3-bar {
+  border-radius: 30px;
+  display: flex;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0d7ff;
+  font-family: Wicked Mouse;
+}
+
+.corps{
+  padding:0;
+  
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  background-size: 844px;
+  background-repeat: no-repeat;
+  overflow:hidden;
+  
+}
+section {
+  max-height: 100%;
+}
+
+
+
+.main-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+.play-button {
+  font-size: calc(var(--size-play) * 0.75);
+  
+  max-width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  background-color: rgb(251, 251, 251);
+  
+  text-align: center;
+  margin-top: 2rem;
+  border-width: 5px;
+  text-decoration: none;
+  box-shadow: 0px 8px #30024F;
+  color:#30024F;
+  font-family: "Wicked Mouse";  
+  margin-bottom: 8rem;
+}
+
+
+.valid-button{
+  font-size: 25px;
+  padding: 1.5rem 6rem;
+  margin-top:1rem;
+  background-color: #ffffff;
+  opacity: 1;
+  background: repeating-linear-gradient( 45deg, #f0d7ff, #f0d7ff 2px, #f0d7ff 2px, #ffffff 10px );
+  text-align: center;
+  border-width: 5px;
+  text-decoration: none;
+  box-shadow: 0px 8px #30024F;
+  color:#30024F;
+  font-family: "Wicked Mouse";
+  text-shadow: 2px 3px white;
+
+}
+
+.segment {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  background: linear-gradient(220deg, #9423C6 35%, #E04484 90%);
+}
+section > div {
+  flex: 1;
+  padding: 0.5rem;
+
+}
+
+h1 {
+  text-align: left;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  font-family: var(--main-font-text);
+  margin-top: 1.5rem;
+  color:white;
+  text-shadow: 2px 3px #30024F;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  color:white;
+  font-family: var(--main-font-text);
+}
+
+#delete {
+  display:none;
+}
+
+#page5 {
+  position:relative;
+  width: 100%;
+  
+}
+#page5 span {
+  position: absolute;
+  bottom: 0%;
+  background: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: inset 0 0 10px rgb(242, 156, 194);
+  animation: animate 4s linear infinite;
+
+}
+#page5 span:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.25) translate(-70%, -70%);
+  background: radial-gradient(rgb(217, 107, 239), transparent);
+  border-radius: 50%;
+}
+
+@keyframes animate {
+  0%
+  {
+      transform: translateY(0%);
+      opacity: 1;
+  }
+  99%
+  {
+      opacity: 1;
+  }
+  100%
+  {
+      transform: translateY(-2000%);
+      opacity: 1;
+  }
+}
+
+input[type="radio"] {
+  display: none;}
+
+input[data-response="good"]:checked + label {
+    /*Colore le label 2 et change la couleur du texte à l'intérieur */
+    background: hsla(150, 75%, 50%, 1);
+    color: hsla(215, 0%, 100%, 1); /*couleur du texte*/
+    border-color: green;
+    font-weight: bold;
+  }
+  
+input[data-response="bad"]:checked + label {
+    background: red;
+    border-color:rgb(129, 2, 2);
+    color: white;
+    font-weight: bold;
+  }
+
+p {
+  font-weight: 900;
+}
+
+.score {
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #30024F;
+  background: rgba(230, 230, 230, .3);
+  padding: 2rem;
+  border-radius: 3rem;
+  width: 8rem;
+}
+.lastimg {
+ size: 0, 25rem;
+}
+.textlastpage {
+  display:flex;
+  text-align: center;
+  align-self: center;
+  font-size: 1.5rem;
+  margin-top:0.2rem;
+}
+.w3-border {
+
+  display: block;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+
+.w3-bar {
+  border-radius: 30px;
+  display: flex;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+  background-color: cyan;
+}
+.desktopnav{
+  display: none;
+}
+
+@media (min-width:1025px) {
+* {
+  margin: 0;
+  /*positioner la marge à 0*/
+  padding: 0;
+  /*positionner le bord à 0*/
+  --main-color: #C31DA8;
+  /*couleur du background*/
+  /*--font-play:*/
+  --main-font-text: "First School";
+  /*Police d'écriture global du site*/
+  --size-text: 8px;
+  /*Taille général des textes*/
+  --size-play: 2rem;
+  /*Taille du texte des bouttons*/
+  box-sizing: border-box;
+}
+  body {
+    max-width: 100%;
+    
+  
+
+  }
+
+
+  .main-logo {
+    
+   
+    max-height: 20%;
+    max-width: 20%;
+  }
+
+  .label{
+    padding:0;
+  }
+
+  #playerchamp{
+   
+   
+    padding-left: 30%;
+    padding-right: 30%;
+   
+  }
+  
+  
+  .play-button {
+    
+    margin-right: 30%;
+    margin-left: 30%;
+  }
+  
+ 
+
+  .reponse{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    grid-gap: 1rem;
+    padding: 0;
+  }
+  .segment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    background: linear-gradient(220deg, #9423C6 35%, #E04484 90%);
+    align-items: center;
+  }
+
+  
+  .segment>a {
+    border-radius: 10px;
+  }
+  .segment>h1{
+    text-align: center;
+  }
+  .mobilequestion{
+    display: none;
+  }
+  .desktopnav  {
+    background-color: #30024F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  .desktopnav>h2{
+    padding: 0;
+  }
+  .desktopnav>img{
+    width: 10%;
+    height: 20%;  
+  }
+  #playerid {
+  margin-right : 60%;
+  }
+  .lastimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    max-height: 20%;
+    max-width: 20%;
+}
+
+
+}
