@@ -1,0 +1,39 @@
+{
+  "name": "reimsquizz",
+<<<<<<< HEAD
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    
+=======
+  "description": "Robin Herimanana  Pierre Yves  Farid Louen Benoît",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "w3c-html-validator": "^1.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "validate":   "html-validator index.html"
+>>>>>>> 126ade8f03dbfa80a88a7841fd8adb95ac168acd
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fangornito/ReimsQuizz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fangornito/ReimsQuizz/issues"
+  },
+<<<<<<< HEAD
+  "homepage": "https://github.com/Fangornito/ReimsQuizz#readme",
+  "dependencies": {
+    "w3c-html-validator": "^1.1.3"
+  }
+=======
+  "homepage": "https://github.com/Fangornito/ReimsQuizz#readme"
+>>>>>>> 126ade8f03dbfa80a88a7841fd8adb95ac168acd
+}
